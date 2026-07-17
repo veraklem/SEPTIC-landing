@@ -46,16 +46,26 @@ interface CrossfadeLoopVideoProps {
  * плавно (opacity, 500ms) выходит поверх - шов петли маскируется кросс-фейдом.
  * Нативный loop включён на обоих экземплярах - подстраховка на случай, если
  * JS-переключение не успеет сработать (не будет краша, просто виден шов).
+ *
+ * Если система запретила автоплей (iOS в энергосбережении и т.п.), рендерим
+ * вместо видео статичный постер: заблокированный <video> рисует системную
+ * кнопку play, которая на декоративном фоне выглядит поломкой. Сигнал - reject
+ * промиса play(); заранее блокировку определить нельзя.
  */
 function CrossfadeLoopVideo({ src, poster, className, style }: CrossfadeLoopVideoProps) {
   const videoARef = useRef<HTMLVideoElement>(null)
   const videoBRef = useRef<HTMLVideoElement>(null)
   const [aOnTop, setAOnTop] = useState(true)
+  const [autoplayBlocked, setAutoplayBlocked] = useState(false)
 
   useEffect(() => {
+    if (autoplayBlocked) return
     const a = videoARef.current
     const b = videoBRef.current
     if (!a || !b) return
+
+    const attempt = a.play()
+    if (attempt) attempt.catch(() => setAutoplayBlocked(true))
 
     let swapping = false
     let resetTimeout: number | undefined
@@ -88,7 +98,11 @@ function CrossfadeLoopVideo({ src, poster, className, style }: CrossfadeLoopVide
       b.removeEventListener('timeupdate', handleTimeUpdate)
       if (resetTimeout !== undefined) window.clearTimeout(resetTimeout)
     }
-  }, [src])
+  }, [src, autoplayBlocked])
+
+  if (autoplayBlocked) {
+    return <img src={poster} alt="" aria-hidden="true" style={style} className={className} />
+  }
 
   return (
     <>
