@@ -1,0 +1,67 @@
+@import '@fontsource-variable/manrope';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: theme('colors.milk');
+  color: theme('colors.ink');
+  font-family: theme('fontFamily.sans');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Fixed navbar offset for anchor links */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+/* Единый гротеск Manrope на весь сайт (кириллица через cyrillic/cyrillic-ext
+   подмножества переменного шрифта, см. импорт выше) - h1/h2 наследуют
+   font-family от body (fontFamily.sans), отдельное правило не нужно. Вес
+   (600-700), line-height и letter-spacing заголовков заданы утилитами
+   text-h1/text-h2 в tailwind.config.js (fontSize.h1/h2), подстроенными под
+   геометричный Manrope: чуть поджатый tracking на крупных размерах. */
+
+/* LightGlassCard - see src/components/ui/LightGlassCard.tsx. Светлая
+   glass-карточка поверх видеофона: сильный blur, тёплый белый фон, тонкий
+   внутренний блик через ::before (без тяжёлого свечения). */
+/* Углы прямые: крупная структурная поверхность, а не мелкий UI-элемент. */
+.light-glass {
+  background: rgba(255, 255, 255, 0.74);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(40, 48, 80, 0.1);
+  box-shadow: 0 24px 80px rgba(40, 48, 80, 0.08);
+}
+
+.light-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(120, 156, 252, 0.08) 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  padding: 1px;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
