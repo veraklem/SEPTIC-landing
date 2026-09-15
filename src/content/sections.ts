@@ -1,3 +1,5 @@
+import { site } from './site'
+
 // Редактируемый контент секций лендинга. Тексты перенесены дословно из SPEC.md.
 // Иконки указаны как имена компонентов lucide-react (см. раздел 1 SPEC - «Иконки»),
 // секции-компоненты сами резолвят имя в конкретный <Icon />.
@@ -56,13 +58,12 @@ export const hero: HeroContent = {
   subtitle: 'Меньше запаха и откачек благодаря работе живых бактерий.',
   description:
     'ИНБИО-СЕПТ помогает поддерживать микрофлору внутри системы, перерабатывать органику и снижать неприятный запах при регулярном применении.',
-  // TODO(client): заменить #buy на финальную ссылку карточки Ozon
-  ctaPrimary: { label: 'Купить на Ozon', href: '#buy' },
+  ctaPrimary: { label: 'Купить на Ozon', href: site.ozon.url },
   ctaSecondary: { label: 'Как применять', href: '#usage' },
   imageSrc: '/images/hero/hero-product-scene.jpg',
   imageAlt:
-    'Флакон биопрепарата ИНБИО-СЕПТ 500 мл в чистой водной сцене - живые бактерии для септиков и выгребных ям',
-  chips: [{ text: '1×10⁹ КОЕ/мл' }, { text: '500 мл' }, { text: 'Без кислот и щелочей' }],
+    'Флакон биопрепарата ИНБИО-СЕПТ 100 мл в чистой водной сцене - живые бактерии для септиков и выгребных ям',
+  chips: [{ text: '1×10⁹ КОЕ/мл' }, { text: '100 мл' }, { text: 'Без кислот и щелочей' }],
   panels: {
     apply: {
       title: 'Просто внесите в систему',
@@ -382,19 +383,24 @@ export const whyBio: {
 export const marketplaceCta: {
   title: string
   subtitle: string
+  ozonLabel: string
+  ozonUrl: string
+  setLabel: string
+  setUrl: string
+  telegramNote: string
   telegramLabel: string
   telegramUrl: string
-  ozonStatusLabel: string
-  ozonStatusNote: string
   secondaryNote: string
 } = {
   title: 'Где купить ИНБИО-СЕПТ',
-  subtitle:
-    'Чтобы заказать сейчас или узнать первым о старте на Ozon - напишите нам в Telegram. Ответим и оформим.',
-  telegramLabel: 'Написать в Telegram',
+  subtitle: 'Продаётся на Ozon: флакон 100 мл или набор 3+1 с флаконом в подарок.',
+  ozonLabel: 'Купить на Ozon',
+  ozonUrl: site.ozon.url,
+  setLabel: 'Набор 3+1 на Ozon',
+  setUrl: 'https://www.ozon.ru/product/inbio-sept-5736437050/?at=1ral1SRw6MJAKoetkJX6aaPVSFTWlqG5&sh=NCR6OvDmbg',
+  telegramNote: 'Вопросы по применению и опту -',
+  telegramLabel: 'напишите в Telegram',
   telegramUrl: 'https://t.me/Inbiolabbot',
-  ozonStatusLabel: 'Ozon',
-  ozonStatusNote: 'скоро в продаже',
   secondaryNote: 'подключим по мере старта продаж',
 }
 
@@ -432,5 +438,5 @@ export const contactSection: {
   subtitle:
     'Уточнить дозировку, условия использования или формат покупки можно напрямую - ответим в Telegram или на почту.',
   ctaPrimary: { label: 'Написать в Telegram', href: 'https://t.me/Inbiolabbot' },
-  ctaSecondary: { label: 'Купить на Ozon', href: '#buy' },
+  ctaSecondary: { label: 'Купить на Ozon', href: site.ozon.url },
 }

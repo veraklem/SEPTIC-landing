@@ -34,10 +34,16 @@ export const site: SiteConfig = {
   retailBrand: 'INBIOSTORE',
   ozon: {
     label: 'Купить на Ozon',
-    url: '#buy', // TODO(client): заменить на финальную ссылку карточки Ozon
+    // Карточка флакона 100 мл (артикул 5736252905). Набор 3+1 - в products.ts.
+    url: 'https://www.ozon.ru/product/inbio-sept-5736252905/?at=1ral1TfU66uof2hoXoUuIntJWL-jgNks&sh=NCR6OvDmbg',
   },
   marketplaces: [
-    { id: 'ozon', name: 'Ozon', url: '#', available: false }, // TODO(client): финальная ссылка карточки
+    {
+      id: 'ozon',
+      name: 'Ozon',
+      url: 'https://www.ozon.ru/product/inbio-sept-5736252905/?at=1ral1TfU66uof2hoXoUuIntJWL-jgNks&sh=NCR6OvDmbg',
+      available: true,
+    },
     { id: 'wildberries', name: 'Wildberries', url: '#', available: false }, // TODO(client)
     { id: 'yandex', name: 'Яндекс Маркет', url: '#', available: false }, // TODO(client)
   ],

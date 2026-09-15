@@ -10,7 +10,8 @@ import { site } from '../../content/site'
 import { productFormats } from '../../content/sections'
 
 /**
- * «Форматы» (#formats): сетка из двух карточек форматов (products.ts) на всю
+ * «Форматы» (#formats): сетка из двух карточек форматов (products.ts: флакон
+ * 100 мл и набор 3+1, у каждого своя ссылка на карточку Ozon) на всю
  * ширину - статус-бейдж, изображение на foam-подложке, характеристики строками
  * (fitsFor / usage / specs), CTA-кнопка; sku/сертификат выводятся внизу только
  * когда заданы. Карточка inDevelopment - строгая рамка (не пунктир),
@@ -54,7 +55,7 @@ export function ProductFormats() {
                         </span>
                       ) : (
                         <span className="inline-flex items-center rounded-[8px] bg-grass-600 px-2.5 py-1 text-[0.68rem] font-semibold uppercase tracking-wide text-white">
-                          Основной формат
+                          {product.badge ?? 'Основной формат'}
                         </span>
                       )}
                     </div>
@@ -65,7 +66,7 @@ export function ProductFormats() {
                           собственная тень продукта. Кадр крупный, вокруг нет
                           лишнего воздуха; пропорции держит object-contain. */}
                       <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
-                        <div className="flex h-52 w-full shrink-0 items-center justify-center sm:h-44 sm:w-36 sm:justify-start">
+                        <div className="flex h-52 w-full shrink-0 items-center justify-center sm:h-44 sm:w-auto sm:justify-start">
                           <ProductMockup
                             src={product.image}
                             alt={product.imageAlt}
@@ -102,7 +103,6 @@ export function ProductFormats() {
                         <div className="mt-auto pt-4">
                           <p className="text-sm text-ink-soft">{product.note}</p>
                           <div className="mt-4 flex flex-wrap gap-2">
-                            {/* TODO: заменить на финальную ссылку карточки Ozon */}
                             <MarketplaceButton
                               marketplace={{ id: 'ozon', name: 'Уточнить наличие', url: site.ozon.url, available: true }}
                               size="compact"
@@ -111,9 +111,13 @@ export function ProductFormats() {
                         </div>
                       ) : (
                         <div className="mt-auto flex flex-wrap gap-2 pt-4">
-                          {/* TODO: заменить на финальную ссылку карточки Ozon */}
                           <MarketplaceButton
-                            marketplace={{ id: 'ozon', name: site.ozon.label, url: site.ozon.url, available: true }}
+                            marketplace={{
+                              id: 'ozon',
+                              name: site.ozon.label,
+                              url: product.ozonUrl ?? site.ozon.url,
+                              available: true,
+                            }}
                             size="compact"
                           />
                         </div>

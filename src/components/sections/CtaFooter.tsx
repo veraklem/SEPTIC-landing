@@ -106,6 +106,9 @@ export function CtaFooter() {
                   href={contactSection.ctaSecondary.href}
                   variant="primary"
                   className="group w-full sm:w-auto"
+                  {...(contactSection.ctaSecondary.href.startsWith('http')
+                    ? { target: '_blank', rel: 'noopener noreferrer' }
+                    : {})}
                 >
                   {contactSection.ctaSecondary.label}
                   <ArrowRight

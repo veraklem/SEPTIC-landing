@@ -57,47 +57,47 @@ export function Hero() {
           {/* 56%, а не 54%: на 54% строке «для чистой работы» не хватало 4px до
               полной ширины и она рвалась на две. Правый край колонки заходит на
               ~20px в бокс фото, но там кадр уже растворён маской - стыка нет. */}
-          <div className="flex w-full flex-col justify-between gap-10 py-2 lg:max-w-[56%] lg:py-10">
-            <div>
-              <Reveal reduceMotion={reduceMotion} delay={0.15}>
-                <SectionLabel>{hero.label}</SectionLabel>
-              </Reveal>
+          {/* Текст - один ровный столбик, отцентрованный по высоте сцены
+              (justify-center), с одинаковым шагом между блоками: label ->
+              заголовок -> подзаголовок -> описание -> кнопки. Раньше колонка
+              была разорвана justify-between на верх и низ, и посередине
+              зияла пустота. */}
+          <div className="flex w-full flex-col justify-center py-4 lg:max-w-[56%] lg:py-12">
+            <Reveal reduceMotion={reduceMotion} delay={0.15}>
+              <SectionLabel>{hero.label}</SectionLabel>
+            </Reveal>
 
-              <HeadlineReveal reduceMotion={reduceMotion} />
+            <HeadlineReveal reduceMotion={reduceMotion} />
 
-              {/* Подзаголовок стоит сразу под заголовком, а не в нижнем блоке
-                  у кнопок: это продолжение мысли заголовка (выгода), а не
-                  подпись к CTA. Заодно съедает пустоту в середине колонки.
-                  Задержки 0.9/1.0 - после старта последнего слова заголовка
-                  (7 слов, последнее уходит на 0.3 + 6x0.1 = 0.9s). */}
-              <Reveal reduceMotion={reduceMotion} delay={0.9}>
-                <p className="mt-6 max-w-lg text-xl leading-relaxed text-ink-soft">
-                  {hero.subtitle}
-                </p>
-              </Reveal>
-            </div>
+            {/* Задержки 0.9/1.0/1.1 - после старта последнего слова заголовка
+                (7 слов, последнее уходит на 0.3 + 6x0.1 = 0.9s). */}
+            <Reveal reduceMotion={reduceMotion} delay={0.9}>
+              <p className="mt-6 max-w-lg text-xl font-medium leading-relaxed text-ink">
+                {hero.subtitle}
+              </p>
+            </Reveal>
 
-            <div>
-              {/* Развёрнутое описание вернулось в нижний блок, к CTA: сверху -
-                  короткая выгода, снизу - что это за продукт, и сразу кнопки. */}
-              <Reveal reduceMotion={reduceMotion} delay={1.0}>
-                <p className="max-w-lg text-lg leading-relaxed text-ink-soft">
-                  {hero.description}
-                </p>
-              </Reveal>
+            <Reveal reduceMotion={reduceMotion} delay={1.0}>
+              <p className="mt-4 max-w-lg text-lg leading-relaxed text-ink-soft">
+                {hero.description}
+              </p>
+            </Reveal>
 
-              <Reveal reduceMotion={reduceMotion} delay={1.1}>
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  {/* TODO: заменить на финальную ссылку карточки Ozon */}
-                  <Button href={hero.ctaPrimary.href} variant="primary" className="w-full sm:w-auto">
-                    {hero.ctaPrimary.label}
-                  </Button>
-                  <Button href={hero.ctaSecondary.href} variant="secondary" className="w-full sm:w-auto">
-                    {hero.ctaSecondary.label}
-                  </Button>
-                </div>
-              </Reveal>
-            </div>
+            <Reveal reduceMotion={reduceMotion} delay={1.1}>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <Button
+                  href={hero.ctaPrimary.href}
+                  variant="primary"
+                  className="w-full sm:w-auto"
+                  {...(hero.ctaPrimary.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                >
+                  {hero.ctaPrimary.label}
+                </Button>
+                <Button href={hero.ctaSecondary.href} variant="secondary" className="w-full sm:w-auto">
+                  {hero.ctaSecondary.label}
+                </Button>
+              </div>
+            </Reveal>
           </div>
         </Container>
 
@@ -120,8 +120,8 @@ export function Hero() {
           <img
             src={hero.imageSrc}
             alt={hero.imageAlt}
-            width={1000}
-            height={1249}
+            width={1122}
+            height={1402}
             loading="eager"
             className="relative h-full w-full object-contain object-bottom"
             // closest-side, а не проценты: радиус эллипса тогда равен половине
@@ -181,7 +181,7 @@ function HeroChips({ reduceMotion }: { reduceMotion: boolean }) {
       {hero.chips.map((chip, i) => (
         <motion.span
           key={chip.text}
-          className={`absolute ${CHIP_POSITIONS[i]} whitespace-nowrap border border-white/70 bg-white/70 px-4 py-2.5 text-[0.8rem] font-semibold text-ink shadow-glass-card backdrop-blur-md`}
+          className={`absolute ${CHIP_POSITIONS[i]} whitespace-nowrap rounded-full border border-white/70 bg-white/70 px-5 py-2.5 text-[0.8rem] font-semibold text-ink shadow-glass-card backdrop-blur-md`}
           initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 12 }}
           animate={
             reduceMotion

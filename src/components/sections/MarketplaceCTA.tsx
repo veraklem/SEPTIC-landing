@@ -1,4 +1,4 @@
-import { Send } from 'lucide-react'
+import { ShoppingBag } from 'lucide-react'
 import { Container } from '../ui/Container'
 import { Button } from '../ui/Button'
 import { FadeIn } from '../ui/FadeIn'
@@ -8,11 +8,10 @@ import { marketplaceCta } from '../../content/sections'
 /**
  * «Где купить» (#buy) - полноширинная фото-полоса в край вьюпорта: фон
  * работает как архитектура страницы, а не как картинка в скруглённой карточке
- * (прямые углы, без рамки и тени, границы задаёт hairline). Ссылок на карточку
- * Ozon пока нет, поэтому главная РАБОЧАЯ кнопка - «Написать в Telegram»
- * (реальный next step прямо сейчас). «Ozon» показан рядом как обозначение
- * канала со статусом «канал открывается» - без фейкового перехода в никуда.
- * WB/Яндекс упомянуты нейтральной строкой.
+ * (прямые углы, без рамки и тени, границы задаёт hairline). Две кнопки ведут
+ * на карточки Ozon: флакон 100 мл (primary) и набор 3+1 (secondary). Telegram
+ * остаётся текстовой ссылкой для вопросов. WB/Яндекс упомянуты нейтральной
+ * строкой.
  */
 export function MarketplaceCTA() {
   const secondaryMarkets = site.marketplaces
@@ -57,25 +56,29 @@ export function MarketplaceCTA() {
           <p className="mx-auto mt-3 max-w-md text-ink-soft">{marketplaceCta.subtitle}</p>
 
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Button
+            <Button href={marketplaceCta.ozonUrl} target="_blank" rel="noopener noreferrer" variant="primary">
+              <ShoppingBag size={18} strokeWidth={1.8} aria-hidden="true" />
+              {marketplaceCta.ozonLabel}
+            </Button>
+            <Button href={marketplaceCta.setUrl} target="_blank" rel="noopener noreferrer" variant="secondary">
+              {marketplaceCta.setLabel}
+            </Button>
+          </div>
+
+          <p className="mt-6 text-sm text-ink-soft">
+            {marketplaceCta.telegramNote}{' '}
+            <a
               href={marketplaceCta.telegramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              variant="primary"
+              className="font-semibold text-sky-700 underline-offset-4 hover:underline"
             >
-              <Send size={18} strokeWidth={1.8} aria-hidden="true" />
               {marketplaceCta.telegramLabel}
-            </Button>
-
-            {/* TODO: заменить на кнопку с финальной ссылкой карточки Ozon, когда продажи откроются */}
-            <span className="inline-flex items-center gap-2 rounded-[12px] border border-sky-600/30 bg-white/80 px-6 py-3.5 text-[0.95rem] font-semibold text-sky-700 backdrop-blur-sm">
-              {marketplaceCta.ozonStatusLabel}
-              <span className="font-normal text-ink-soft">- {marketplaceCta.ozonStatusNote}</span>
-            </span>
-          </div>
+            </a>
+          </p>
 
           {secondaryMarkets && (
-            <p className="mt-6 text-sm text-ink-soft">
+            <p className="mt-2 text-sm text-ink-soft">
               {secondaryMarkets}: {marketplaceCta.secondaryNote}
             </p>
           )}
