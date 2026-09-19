@@ -1,0 +1,308 @@
+{
+  "content": [
+    {
+      "widgetName": "raShowcase",
+      "type": "billboard",
+      "blocks": [
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/01-hero.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/01-hero.jpg",
+            "width": 1416,
+            "height": 708,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "ИНБИО-СЕПТ: загородный дом, ухоженный участок и флакон биологического средства для септика"
+          },
+          "title": {
+            "size": "size1",
+            "align": "left",
+            "content": [
+              "ИНБИО-СЕПТ"
+            ]
+          },
+          "text": {
+            "size": "size3",
+            "align": "left",
+            "content": [
+              "Биологический уход за септиком",
+              "Живые микроорганизмы для септиков и выгребных ям: меньше неприятного запаха, органических отложений и заиливания при регулярном уходе."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "widgetName": "raShowcase",
+      "type": "chess",
+      "blocks": [
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/02-inside.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/02-inside.jpg",
+            "width": 1416,
+            "height": 708,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "Разрез септической системы под домом: камеры, органические отложения и движение жидкости"
+          },
+          "title": {
+            "size": "size2",
+            "align": "left",
+            "content": [
+              "Что происходит внутри системы"
+            ]
+          },
+          "text": {
+            "size": "size4",
+            "align": "left",
+            "content": [
+              "Живые микроорганизмы работают с органическими отходами внутри септика.",
+              "1. Органические отходы → 2. Работа микроорганизмов → 3. Более стабильное состояние системы"
+            ]
+          }
+        },
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/05-science.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/05-science.jpg",
+            "width": 1416,
+            "height": 708,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "Макросъёмка: микроорганизмы вокруг органической частицы, оттенки teal и aqua"
+          },
+          "title": {
+            "size": "size2",
+            "align": "left",
+            "content": [
+              "Живые бактерии в работе"
+            ]
+          },
+          "text": {
+            "size": "size4",
+            "align": "left",
+            "content": [
+              "Комплекс микроорганизмов. 1×10⁹ КОЕ/мл.",
+              "Разные микроорганизмы работают с разными типами органики.",
+              "В составе консорциума: Bradyrhizobium, Rhodopseudomonas, Pseudomonas, Lactobacillus, Bacillus, Rhizobium."
+            ]
+          },
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "widgetName": "raShowcase",
+      "type": "chess",
+      "blocks": [
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/04-dosing.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/04-dosing.jpg",
+            "width": 1416,
+            "height": 708,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "Три режима внесения ИНБИО-СЕПТ: поддержка, старт и ударная доза, мл на 1 м³"
+          },
+          "title": {
+            "size": "size2",
+            "align": "left",
+            "content": [
+              "Подберите режим внесения"
+            ]
+          },
+          "text": {
+            "size": "size4",
+            "align": "left",
+            "content": [
+              "Расчёт на 1 м³ объёма системы: выберите режим и отмерьте нужное количество."
+            ]
+          },
+          "reverse": true
+        },
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/04-dose-bottles.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/04-dose-bottles.jpg",
+            "width": 1416,
+            "height": 708,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "Один флакон ИНБИО-СЕПТ 100 мл и два флакона 200 мл на камнях у воды"
+          },
+          "title": {
+            "size": "size2",
+            "align": "left",
+            "content": [
+              "Сколько это во флаконах"
+            ]
+          },
+          "text": {
+            "size": "size4",
+            "align": "left",
+            "content": [
+              "Один флакон 100 мл: стартовая доза на 1 м³.",
+              "Два флакона 200 мл: ударная доза на 1 м³.",
+              "Половина флакона 50 мл: поддержка на 1 м³."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "widgetName": "raTable",
+      "table": {
+        "head": [
+          {
+            "text": [
+              "Режим"
+            ],
+            "align": "left"
+          },
+          {
+            "text": [
+              "Доза на 1 м³"
+            ],
+            "align": "left"
+          },
+          {
+            "text": [
+              "Когда применять"
+            ],
+            "align": "left"
+          }
+        ],
+        "hideHead": false,
+        "hoverRow": true,
+        "body": [
+          [
+            [
+              "Поддержка"
+            ],
+            [
+              "50 мл на 1 м³"
+            ],
+            [
+              "Регулярный уход за системой."
+            ]
+          ],
+          [
+            [
+              "Старт"
+            ],
+            [
+              "100 мл на 1 м³"
+            ],
+            [
+              "Первое внесение или запуск после длительного перерыва."
+            ]
+          ],
+          [
+            [
+              "Ударная доза"
+            ],
+            [
+              "200 мл на 1 м³"
+            ],
+            [
+              "При выраженном запахе или повышенной нагрузке."
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "widgetName": "raShowcase",
+      "type": "chess",
+      "blocks": [
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/06-howto.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/06-howto.jpg",
+            "width": 1416,
+            "height": 708,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "Флакон ИНБИО-СЕПТ 100 мл и капля жидкости на светлой поверхности"
+          },
+          "title": {
+            "size": "size2",
+            "align": "left",
+            "content": [
+              "Как использовать"
+            ]
+          },
+          "text": {
+            "size": "size4",
+            "align": "left",
+            "content": [
+              "1. Встряхните флакон.",
+              "2. Отмерьте нужное количество.",
+              "3. Внесите в систему.",
+              "Куда вносить. Септик: через унитаз или раковину, смыть водой. Биотуалет: в приёмный резервуар. Выгребная яма: при необходимости развести в воде."
+            ]
+          },
+          "reverse": true
+        },
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/07-set.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/07-set.jpg",
+            "width": 1416,
+            "height": 708,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "Четыре флакона ИНБИО-СЕПТ по 100 мл на камне у воды"
+          },
+          "title": {
+            "size": "size2",
+            "align": "left",
+            "content": [
+              "Гибкий формат под разные задачи"
+            ]
+          },
+          "text": {
+            "size": "size4",
+            "align": "left",
+            "content": [
+              "4 отдельных флакона: используйте столько, сколько нужно. 50 мл поддержка, 100 мл старт, 200 мл ударная доза, 400 мл общий объём набора."
+            ]
+          }
+        },
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/08-conditions.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/08-conditions.jpg",
+            "width": 1000,
+            "height": 1000,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "Флакон ИНБИО-СЕПТ на камне, вокруг четыре сезона: весна, лето, осень, зима"
+          },
+          "title": {
+            "size": "size2",
+            "align": "left",
+            "content": [
+              "Чтобы бактерии работали эффективно"
+            ]
+          },
+          "text": {
+            "size": "size4",
+            "align": "left",
+            "content": [
+              "Уход нужен в любой сезон: бактерии активнее в тепле, средство нельзя замораживать.",
+              "Перед применением встряхните средство.",
+              "Соблюдайте рекомендуемую дозировку.",
+              "При регулярном уходе используйте поддерживающий режим.",
+              "Агрессивную бытовую химию на время внесения лучше ограничить: бактериям нужно расселиться в системе."
+            ]
+          },
+          "reverse": true
+        }
+      ]
+    }
+  ],
+  "version": 0.3
+}
