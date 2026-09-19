@@ -1,0 +1,187 @@
+{
+  "content": [
+    {
+      "widgetName": "raShowcase",
+      "type": "billboard",
+      "blocks": [
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/hero-wide.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/hero-square.jpg",
+            "width": 1416,
+            "height": 708,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "Флакон ИНБИО-СЕПТ на фоне загородного дома и ухоженного участка"
+          },
+          "title": {
+            "size": "size1",
+            "align": "left",
+            "content": [
+              "ИНБИО-СЕПТ"
+            ]
+          },
+          "text": {
+            "size": "size3",
+            "align": "left",
+            "content": [
+              "Биологическое средство для септиков, выгребных ям и биотуалетов. Во флаконе сто миллилитров концентрата с живыми микроорганизмами.",
+              "Микроорганизмы перерабатывают органические отходы прямо внутри системы. При регулярном применении становится меньше неприятного запаха, медленнее накапливаются отложения и ил."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "widgetName": "raShowcase",
+      "type": "chess",
+      "blocks": [
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/science.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/science.jpg",
+            "width": 1000,
+            "height": 1000,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "Макросъёмка: живые микроорганизмы вокруг частицы органики в бирюзовых тонах"
+          },
+          "title": {
+            "size": "size2",
+            "align": "left",
+            "content": [
+              "Живые бактерии в работе"
+            ]
+          },
+          "text": {
+            "size": "size4",
+            "align": "left",
+            "content": [
+              "В составе работает комплекс живых микроорганизмов, общее число клеток составляет один миллиард колониеобразующих единиц на каждый миллилитр концентрата.",
+              "Разные группы бактерий перерабатывают разные виды органики: жиры, бумагу и остатки пищи. Поэтому содержимое септика расщепляется постепенно и равномерно."
+            ]
+          }
+        },
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/howto.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/howto.jpg",
+            "width": 1000,
+            "height": 1000,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "Флакон ИНБИО-СЕПТ рядом с каплей жидкости на светлой поверхности"
+          },
+          "title": {
+            "size": "size2",
+            "align": "left",
+            "content": [
+              "Как использовать"
+            ]
+          },
+          "text": {
+            "size": "size4",
+            "align": "left",
+            "content": [
+              "Встряхните флакон перед применением и отмерьте нужное количество средства. В септик его вносят через унитаз или раковину и смывают водой.",
+              "В биотуалет средство добавляют в приёмный резервуар. Для выгребной ямы концентрат при необходимости сначала разводят в ведре воды."
+            ]
+          },
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "widgetName": "raShowcase",
+      "type": "billboard",
+      "blocks": [
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/dosing-wide.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/dosing-square.jpg",
+            "width": 1416,
+            "height": 708,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "Три режима внесения ИНБИО-СЕПТ: поддержка, старт и ударная доза"
+          },
+          "title": {
+            "size": "size1",
+            "align": "left",
+            "content": [
+              "Подберите режим внесения"
+            ]
+          },
+          "text": {
+            "size": "size3",
+            "align": "left",
+            "content": [
+              "Количество средства рассчитывается на каждый кубический метр объёма системы. Для регулярного ухода достаточно пятидесяти миллилитров на кубический метр.",
+              "При первом внесении или после долгого перерыва используйте сто миллилитров, а при выраженном запахе или повышенной нагрузке увеличьте дозу до двухсот миллилитров на кубический метр."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "widgetName": "raShowcase",
+      "type": "chess",
+      "blocks": [
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/bottles.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/bottles.jpg",
+            "width": 1000,
+            "height": 1000,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "Один флакон ИНБИО-СЕПТ 100 мл на светлом фоне"
+          },
+          "title": {
+            "size": "size2",
+            "align": "left",
+            "content": [
+              "Сколько это во флаконах"
+            ]
+          },
+          "text": {
+            "size": "size4",
+            "align": "left",
+            "content": [
+              "Одного флакона хватает на стартовое внесение в систему объёмом один кубический метр.",
+              "Для поддерживающего ухода расходуется половина флакона, а при повышенной нагрузке понадобятся два флакона."
+            ]
+          }
+        },
+        {
+          "img": {
+            "src": "https://inbiosept.ru/rich/desktop/conditions.jpg",
+            "srcMobile": "https://inbiosept.ru/rich/mobile/conditions.jpg",
+            "width": 1000,
+            "height": 1000,
+            "widthMobile": 1000,
+            "heightMobile": 1000,
+            "alt": "Флакон ИНБИО-СЕПТ на камне, вокруг четыре сезона"
+          },
+          "title": {
+            "size": "size2",
+            "align": "left",
+            "content": [
+              "Чтобы бактерии работали эффективно"
+            ]
+          },
+          "text": {
+            "size": "size4",
+            "align": "left",
+            "content": [
+              "Средство подходит для применения в любой сезон, но в тепле бактерии работают активнее. Замораживать концентрат нельзя, храните его в сухом тёмном месте.",
+              "На время внесения лучше ограничить агрессивную бытовую химию: бактериям нужно время, чтобы расселиться в системе."
+            ]
+          },
+          "reverse": true
+        }
+      ]
+    }
+  ],
+  "version": 0.3
+}
